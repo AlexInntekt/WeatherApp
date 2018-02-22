@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A56EEAE9980B52E41AB4CAF3 /* Pods_Paguda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0487A28CF34259FCD27FC5D /* Pods_Paguda.framework */; };
 		B2523B51203F38E700568576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2523B50203F38E700568576 /* AppDelegate.swift */; };
 		B2523B53203F38E700568576 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2523B52203F38E700568576 /* ViewController.swift */; };
 		B2523B56203F38E700568576 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2523B54203F38E700568576 /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		702C74F4093202705A57509C /* Pods-Paguda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paguda.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paguda/Pods-Paguda.debug.xcconfig"; sourceTree = "<group>"; };
+		B0487A28CF34259FCD27FC5D /* Pods_Paguda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paguda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2523B4D203F38E700568576 /* Paguda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paguda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2523B50203F38E700568576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2523B52203F38E700568576 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		B2523B6F203F38E700568576 /* PagudaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagudaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2523B73203F38E700568576 /* PagudaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagudaUITests.swift; sourceTree = "<group>"; };
 		B2523B75203F38E700568576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B275943ACFE2F6FC13B2DF62 /* Pods-Paguda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paguda.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paguda/Pods-Paguda.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56EEAE9980B52E41AB4CAF3 /* Pods_Paguda.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DCA4DDA49DB03E204637F7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				702C74F4093202705A57509C /* Pods-Paguda.debug.xcconfig */,
+				B275943ACFE2F6FC13B2DF62 /* Pods-Paguda.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8B4E9202A9CF0D622FB754AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0487A28CF34259FCD27FC5D /* Pods_Paguda.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B2523B44203F38E700568576 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +105,8 @@
 				B2523B67203F38E700568576 /* PagudaTests */,
 				B2523B72203F38E700568576 /* PagudaUITests */,
 				B2523B4E203F38E700568576 /* Products */,
+				2DCA4DDA49DB03E204637F7A /* Pods */,
+				8B4E9202A9CF0D622FB754AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2523B78203F38E700568576 /* Build configuration list for PBXNativeTarget "Paguda" */;
 			buildPhases = (
+				2B70AC44DB6F152C0C894CA9 /* [CP] Check Pods Manifest.lock */,
 				B2523B49203F38E700568576 /* Sources */,
 				B2523B4A203F38E700568576 /* Frameworks */,
 				B2523B4B203F38E700568576 /* Resources */,
+				BC89FB2853E1C8E467371804 /* [CP] Embed Pods Frameworks */,
+				40C15BD332389E63A159DE99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +283,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B70AC44DB6F152C0C894CA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Paguda-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40C15BD332389E63A159DE99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Paguda/Pods-Paguda-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC89FB2853E1C8E467371804 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Paguda/Pods-Paguda-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Paguda/Pods-Paguda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2523B49203F38E700568576 /* Sources */ = {
@@ -428,6 +509,7 @@
 		};
 		B2523B79203F38E700568576 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 702C74F4093202705A57509C /* Pods-Paguda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,6 +525,7 @@
 		};
 		B2523B7A203F38E700568576 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B275943ACFE2F6FC13B2DF62 /* Pods-Paguda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
