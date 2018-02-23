@@ -102,10 +102,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9c-hE-I9F">
-                                <rect key="frame" x="0.0" y="418" width="375" height="249"/>
+                                <rect key="frame" x="0.0" y="388" width="375" height="279"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R32-TO-1l8">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="279"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayCell" id="znJ-Jd-fyO">
@@ -149,7 +149,7 @@
                             <constraint firstItem="Ub1-m8-8dq" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="6KC-Ma-scT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uiW-vP-8ji" secondAttribute="trailing" constant="20" id="Gah-fK-bx7"/>
                             <constraint firstItem="Ub1-m8-8dq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="POl-mb-CrW"/>
-                            <constraint firstItem="r9c-hE-I9F" firstAttribute="top" secondItem="uiW-vP-8ji" secondAttribute="bottom" id="Y81-TJ-c4W"/>
+                            <constraint firstItem="r9c-hE-I9F" firstAttribute="top" secondItem="uiW-vP-8ji" secondAttribute="bottom" constant="-30" id="Y81-TJ-c4W"/>
                             <constraint firstItem="uiW-vP-8ji" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="d1k-Ec-Jer"/>
                             <constraint firstItem="r9c-hE-I9F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="enU-sd-KfR"/>
                             <constraint firstItem="uiW-vP-8ji" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gqQ-uy-Hdk"/>
