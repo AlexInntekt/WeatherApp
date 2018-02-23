@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet var tbv: UITableView!
     
+    @IBOutlet var cityLabel: UILabel!
+    @IBOutlet var tempLabel: UILabel!
     
     override func viewDidLoad()
     {
@@ -29,13 +31,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tbv.dataSource = self
         tbv.delegate = self
         
-        var k = WeatherSituation()
-        k.downloadData {
-            
-        }
+        updateUI()
     }
 
-    
+    func updateUI()
+    {
+        var k = WeatherSituation()
+        k.downloadData {
+            self.cityLabel.text = k._cityName
+            self.tempLabel.text = String(k._currentTemp)
+        }
+    }
 
     func setUp()
     {

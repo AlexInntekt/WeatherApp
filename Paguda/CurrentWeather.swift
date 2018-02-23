@@ -19,14 +19,14 @@ class WeatherSituation
     
     var cityName: String {
         if _cityName == nil {
-            _cityName = ""
+            _cityName = "nil"
         }
         return _cityName
     }
     
     var date: String {
         if _date == nil {
-            _date = ""
+            _date = "nil"
         }
         
         let dateFormatter = DateFormatter()
@@ -41,7 +41,7 @@ class WeatherSituation
     
     var _eatherType: String {
         if _weatherType == nil {
-            _weatherType = ""
+            _weatherType = "nil"
         }
         return _weatherType
     }
@@ -55,16 +55,41 @@ class WeatherSituation
     }
     
 
-    func downloadData(completed: DownloadComplete)
+
+    func downloadData(completed: @escaping DownloadComplete)
     {
         //Download with Alamofire
         let currentURL = URL(string: current_weather_url)!
         
-        Alamofire.request(currentURL).responseJSON { response in
+        Alamofire.request(currentURL).responseJSON
+       { response in
             let result = response.result
-            print(result)
+            print(response)
+            
+            if let dictionary = result.value as? Dictionary<String, AnyObject>
+            {
+                if let name = dictionary["name"] as? String
+                {
+          
+                    self._cityName = name.capitalized
+                    
+                }
+                
+                if let main = dictionary["main"] as? Dictionary<String, AnyObject>
+                {
+                    if let currentTemperatureInKelvin = main["temp"] as? Double
+                    {
+                        var tempInCelsius = currentTemperatureInKelvin - 273.15
+                        self._currentTemp = tempInCelsius
+                    }
+                    
+                    
+                    
+                }
+            }
+            completed()
         }
-        completed()
+        
         
     }
     
