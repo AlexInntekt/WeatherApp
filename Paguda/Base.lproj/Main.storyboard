@@ -1,24 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Paguda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper-weather-3" translatesAutoresizingMaskIntoConstraints="NO" id="Ub1-m8-8dq">
+                                <rect key="frame" x="0.0" y="0.5" width="375" height="666.5"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiW-vP-8ji">
+                                <rect key="frame" x="20" y="30" width="335" height="388"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ate-Mc-5fh">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="388"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MVv-it-qaY">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="388"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="AGX-Hj-8qA">
+                                                    <rect key="frame" x="10" y="7" width="159" height="374"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, 27th of July" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prv-6q-dVc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="159" height="65.5"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                                            <color key="textColor" red="0.76470588240000004" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPx-Z6-hBL">
+                                                            <rect key="frame" x="0.0" y="65.5" width="92" height="208"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="58"/>
+                                                            <color key="textColor" red="0.76470588240000004" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bucharest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPA-Zc-fhT">
+                                                            <rect key="frame" x="0.0" y="273.5" width="129" height="100.5"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="28"/>
+                                                            <color key="textColor" red="0.76470588240000004" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <viewLayoutGuide key="safeArea" id="nrH-Py-EjJ"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="AGX-Hj-8qA" secondAttribute="bottom" constant="7" id="9Lj-Cm-B9U"/>
+                                                <constraint firstItem="AGX-Hj-8qA" firstAttribute="top" secondItem="MVv-it-qaY" secondAttribute="top" constant="7" id="Ema-dJ-Top"/>
+                                                <constraint firstItem="AGX-Hj-8qA" firstAttribute="leading" secondItem="MVv-it-qaY" secondAttribute="leading" constant="10" id="ItR-IA-i8z"/>
+                                            </constraints>
+                                        </view>
+                                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="0.28082191780821919" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ate-Mc-5fh" firstAttribute="height" secondItem="uiW-vP-8ji" secondAttribute="height" id="IDf-UY-f9X"/>
+                                    <constraint firstItem="ate-Mc-5fh" firstAttribute="centerY" secondItem="uiW-vP-8ji" secondAttribute="centerY" id="R1E-co-sEz"/>
+                                    <constraint firstItem="ate-Mc-5fh" firstAttribute="centerX" secondItem="uiW-vP-8ji" secondAttribute="centerX" id="r5U-Ll-crQ"/>
+                                    <constraint firstItem="ate-Mc-5fh" firstAttribute="width" secondItem="uiW-vP-8ji" secondAttribute="width" id="xFN-4S-DCn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ub1-m8-8dq" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="6KC-Ma-scT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uiW-vP-8ji" secondAttribute="trailing" constant="20" id="Gah-fK-bx7"/>
+                            <constraint firstItem="Ub1-m8-8dq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="POl-mb-CrW"/>
+                            <constraint firstItem="uiW-vP-8ji" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="d1k-Ec-Jer"/>
+                            <constraint firstItem="uiW-vP-8ji" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gqQ-uy-Hdk"/>
+                            <constraint firstItem="Ub1-m8-8dq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mEI-Jl-Ed2"/>
+                            <constraint firstItem="Ub1-m8-8dq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ryC-R2-B5Y"/>
+                            <constraint firstItem="uiW-vP-8ji" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.6" id="uzj-rt-R2i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="topView" destination="uiW-vP-8ji" id="e2n-mO-d5B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wallpaper-weather-3" width="1800" height="1199"/>
+    </resources>
 </document>
