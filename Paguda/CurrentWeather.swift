@@ -62,7 +62,7 @@ class WeatherSituation
         
         Alamofire.request(currentURL).responseJSON { response in
             let result = response.result
-            print(result)
+            print(response)
         }
         completed()
         

@@ -29,9 +29,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tbv.dataSource = self
         tbv.delegate = self
         
-        var k = WeatherSituation()
+        let k = WeatherSituation()
         k.downloadData {
-            
+            //Setup the UI to load downloaded data wow
         }
     }
 
