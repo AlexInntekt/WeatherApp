@@ -13,6 +13,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
+            <string>Avenir-Black</string>
             <string>Avenir-Heavy</string>
         </array>
     </customFonts>
@@ -100,21 +101,68 @@
                                     <constraint firstItem="ate-Mc-5fh" firstAttribute="width" secondItem="uiW-vP-8ji" secondAttribute="width" id="xFN-4S-DCn"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9c-hE-I9F">
+                                <rect key="frame" x="0.0" y="418" width="375" height="249"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R32-TO-1l8">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayCell" id="znJ-Jd-fyO">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="znJ-Jd-fyO" id="NUA-vG-spd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9py-6V-ZI3">
+                                                            <rect key="frame" x="30" y="0.0" width="120" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="CB3-La-AW4"/>
+                                                                <constraint firstAttribute="width" constant="120" id="zpW-Tm-ibO"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="9py-6V-ZI3" firstAttribute="top" secondItem="NUA-vG-spd" secondAttribute="top" id="BSD-Qq-udX"/>
+                                                        <constraint firstItem="9py-6V-ZI3" firstAttribute="leading" secondItem="NUA-vG-spd" secondAttribute="leading" constant="30" id="WwS-7o-ps0"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.72602739726027399" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="R32-TO-1l8" firstAttribute="height" secondItem="r9c-hE-I9F" secondAttribute="height" id="9QC-fx-b38"/>
+                                    <constraint firstItem="R32-TO-1l8" firstAttribute="centerX" secondItem="r9c-hE-I9F" secondAttribute="centerX" id="JfN-37-1eg"/>
+                                    <constraint firstItem="R32-TO-1l8" firstAttribute="centerY" secondItem="r9c-hE-I9F" secondAttribute="centerY" id="PM9-mh-Mkc"/>
+                                    <constraint firstItem="R32-TO-1l8" firstAttribute="width" secondItem="r9c-hE-I9F" secondAttribute="width" id="shB-RW-WYe"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ub1-m8-8dq" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="6KC-Ma-scT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uiW-vP-8ji" secondAttribute="trailing" constant="20" id="Gah-fK-bx7"/>
                             <constraint firstItem="Ub1-m8-8dq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="POl-mb-CrW"/>
+                            <constraint firstItem="r9c-hE-I9F" firstAttribute="top" secondItem="uiW-vP-8ji" secondAttribute="bottom" id="Y81-TJ-c4W"/>
                             <constraint firstItem="uiW-vP-8ji" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="d1k-Ec-Jer"/>
+                            <constraint firstItem="r9c-hE-I9F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="enU-sd-KfR"/>
                             <constraint firstItem="uiW-vP-8ji" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gqQ-uy-Hdk"/>
                             <constraint firstItem="Ub1-m8-8dq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mEI-Jl-Ed2"/>
                             <constraint firstItem="Ub1-m8-8dq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ryC-R2-B5Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r9c-hE-I9F" secondAttribute="trailing" id="tq8-Jk-j2a"/>
                             <constraint firstItem="uiW-vP-8ji" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.6" id="uzj-rt-R2i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r9c-hE-I9F" secondAttribute="bottom" id="zXl-Oe-4nE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="tbv" destination="R32-TO-1l8" id="o7u-I6-0Bj"/>
                         <outlet property="topView" destination="uiW-vP-8ji" id="e2n-mO-d5B"/>
                     </connections>
                 </viewController>
