@@ -16,6 +16,8 @@
 		B2523B5E203F38E700568576 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2523B5C203F38E700568576 /* LaunchScreen.storyboard */; };
 		B2523B69203F38E700568576 /* PagudaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2523B68203F38E700568576 /* PagudaTests.swift */; };
 		B2523B74203F38E700568576 /* PagudaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2523B73203F38E700568576 /* PagudaUITests.swift */; };
+		B25FC68520407D2E006E4B4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FC68420407D2E006E4B4D /* Constants.swift */; };
+		B25FC6872040813F006E4B4D /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FC6862040813F006E4B4D /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		B2523B6F203F38E700568576 /* PagudaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagudaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2523B73203F38E700568576 /* PagudaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagudaUITests.swift; sourceTree = "<group>"; };
 		B2523B75203F38E700568576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B25FC68420407D2E006E4B4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B25FC6862040813F006E4B4D /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		B275943ACFE2F6FC13B2DF62 /* Pods-Paguda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paguda.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paguda/Pods-Paguda.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +129,8 @@
 			children = (
 				B2523B50203F38E700568576 /* AppDelegate.swift */,
 				B2523B52203F38E700568576 /* ViewController.swift */,
+				B25FC68420407D2E006E4B4D /* Constants.swift */,
+				B25FC6862040813F006E4B4D /* CurrentWeather.swift */,
 				B2523B54203F38E700568576 /* Main.storyboard */,
 				B2523B5A203F38E700568576 /* Assets.xcassets */,
 				B2523B5C203F38E700568576 /* LaunchScreen.storyboard */,
@@ -344,8 +350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2523B53203F38E700568576 /* ViewController.swift in Sources */,
+				B25FC6872040813F006E4B4D /* CurrentWeather.swift in Sources */,
 				B2523B51203F38E700568576 /* AppDelegate.swift in Sources */,
 				B2523B59203F38E700568576 /* Paguda.xcdatamodeld in Sources */,
+				B25FC68520407D2E006E4B4D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

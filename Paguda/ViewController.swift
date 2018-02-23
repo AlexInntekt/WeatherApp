@@ -23,13 +23,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        print(current_weather_url)
+        
         setUp()
         tbv.dataSource = self
         tbv.delegate = self
         
-        
+        var k = WeatherSituation()
+        k.downloadData {
+            
+        }
     }
 
+    
 
     func setUp()
     {
