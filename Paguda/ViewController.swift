@@ -46,6 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.cityLabel.text = k._cityName
             self.tempLabel.text = String(format: "%.1f", k._currentTemp) + "°C"
             self.stateLabel.text = k._description
+            self.timeLabel.text = String("\(k.date)")
             
             switch k._weatherType
             {
@@ -59,7 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.weatherIcon.image = nil
             }
             
-            self.timeLabel.text = "\(k._date)"
+            
         }
     }
 
