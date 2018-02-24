@@ -54,7 +54,7 @@ class WeatherSituation
         return _currentTemp
     }
     
-
+  
     func downloadData(completed: DownloadComplete)
     {
         //Download with Alamofire
