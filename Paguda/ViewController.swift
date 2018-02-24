@@ -20,6 +20,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var tempLabel: UILabel!
     
+    @IBOutlet var weatherIcon: UIImageView!
+    
     @IBOutlet var stateLabel: UILabel!
     override func viewDidLoad()
     {
@@ -41,7 +43,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         k.downloadData {
             self.cityLabel.text = k._cityName
             self.tempLabel.text = String(format: "%.1f", k._currentTemp) + "°C"
-            self.stateLabel.text = k._weatherType
+            self.stateLabel.text = k._description
+            
+            switch k._weatherType
+            {
+            case "Rainy":
+                self.weatherIcon.image = #imageLiteral(resourceName: "rainy clouds")
+            case "Clear":
+                self.weatherIcon.image = #imageLiteral(resourceName: "clearSky")
+            case "Clouds":
+                self.weatherIcon.image = #imageLiteral(resourceName: "clouds")
+            default:
+                self.weatherIcon.image = nil
+            }
+            
+            //self.weatherIcon.image
         }
     }
 

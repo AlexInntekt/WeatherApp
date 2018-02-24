@@ -15,6 +15,7 @@ class WeatherSituation
     var _cityName: String!
     var _date: String!
     var _weatherType: String!
+    var _description: String!
     var _currentTemp: Double!
     
     var cityName: String {
@@ -46,6 +47,12 @@ class WeatherSituation
         return _weatherType
     }
     
+    var description: String {
+        if _description == nil {
+            _description = "nil"
+        }
+        return _description
+    }
     
     var currentTemp: Double {
         if _currentTemp == nil {
@@ -78,8 +85,8 @@ class WeatherSituation
                 if let weather = dictionary["weather"] as? [Dictionary<String, AnyObject>]
                 {
                     
-                    self._weatherType = weather[0]["description"] as! String
-                    
+                    self._description = weather[0]["description"] as! String
+                    self._weatherType = weather[0]["main"] as! String
                 }
                 
                 if let main = dictionary["main"] as? Dictionary<String, AnyObject>

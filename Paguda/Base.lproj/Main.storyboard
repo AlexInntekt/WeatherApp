@@ -167,6 +167,7 @@
                         <outlet property="tbv" destination="R32-TO-1l8" id="o7u-I6-0Bj"/>
                         <outlet property="tempLabel" destination="aPx-Z6-hBL" id="PQt-D5-39S"/>
                         <outlet property="topView" destination="uiW-vP-8ji" id="e2n-mO-d5B"/>
+                        <outlet property="weatherIcon" destination="eql-kJ-52C" id="zJn-NJ-hgG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
