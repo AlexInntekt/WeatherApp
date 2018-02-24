@@ -45,13 +45,13 @@
                                                         <constraint firstAttribute="width" constant="300" id="uw1-sK-hrD"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
-                                                    <color key="textColor" red="0.76470588240000004" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.90805348192436552" green="0.90109422213897616" blue="0.56449853846602893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temp°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPx-Z6-hBL">
-                                                    <rect key="frame" x="10" y="149" width="250" height="100"/>
+                                                    <rect key="frame" x="10" y="179" width="250" height="70"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="100" id="2a0-yz-wBA"/>
+                                                        <constraint firstAttribute="height" constant="70" id="2a0-yz-wBA"/>
                                                         <constraint firstAttribute="width" constant="250" id="JhM-Xd-pBL"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="58"/>
@@ -59,12 +59,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPA-Zc-fhT">
-                                                    <rect key="frame" x="10" y="249" width="200" height="50"/>
+                                                    <rect key="frame" x="10" y="249" width="250" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="AgS-Sz-s7f"/>
-                                                        <constraint firstAttribute="width" constant="200" id="E5u-67-RnX"/>
+                                                        <constraint firstAttribute="width" constant="250" id="E5u-67-RnX"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="28"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="38"/>
                                                     <color key="textColor" red="0.76470588240000004" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
