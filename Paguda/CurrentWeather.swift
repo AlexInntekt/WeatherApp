@@ -39,7 +39,7 @@ class WeatherSituation
         return _date
     }
     
-    var _eatherType: String {
+    var weatherType: String {
         if _weatherType == nil {
             _weatherType = "nil"
         }
@@ -75,6 +75,13 @@ class WeatherSituation
                     
                 }
                 
+                if let weather = dictionary["weather"] as? [Dictionary<String, AnyObject>]
+                {
+                    
+                    self._weatherType = weather[0]["description"] as! String
+                    
+                }
+                
                 if let main = dictionary["main"] as? Dictionary<String, AnyObject>
                 {
                     if let currentTemperatureInKelvin = main["temp"] as? Double
@@ -82,10 +89,10 @@ class WeatherSituation
                         var tempInCelsius = currentTemperatureInKelvin - 273.15
                         self._currentTemp = tempInCelsius
                     }
-                    
-                    
-                    
+ 
                 }
+                
+                
             }
             completed()
         }

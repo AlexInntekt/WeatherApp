@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var tempLabel: UILabel!
     
+    @IBOutlet var stateLabel: UILabel!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -39,7 +40,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var k = WeatherSituation()
         k.downloadData {
             self.cityLabel.text = k._cityName
-            self.tempLabel.text = String(k._currentTemp)
+            self.tempLabel.text = String(format: "%.1f", k._currentTemp) + "°C"
+            self.stateLabel.text = k._weatherType
         }
     }
 
