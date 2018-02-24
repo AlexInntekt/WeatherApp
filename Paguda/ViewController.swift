@@ -23,6 +23,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var weatherIcon: UIImageView!
     
     @IBOutlet var stateLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -57,7 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.weatherIcon.image = nil
             }
             
-            //self.weatherIcon.image
+            self.timeLabel.text = "\(k._date)"
         }
     }
 

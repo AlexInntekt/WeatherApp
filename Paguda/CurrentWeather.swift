@@ -100,6 +100,8 @@ class WeatherSituation
                 }
                 
                 
+                
+                
             }
             completed()
         }
