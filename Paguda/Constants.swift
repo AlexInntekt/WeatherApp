@@ -20,3 +20,5 @@ typealias DownloadComplete = () -> ()
 
 //example of api call:
 //http://api.openweathermap.org/data/2.5/weather?lat=35&lon=40&APPID=638c10af91af6014fffcc79951d96128
+
+
