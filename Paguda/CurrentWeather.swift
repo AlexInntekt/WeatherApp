@@ -63,10 +63,10 @@ class WeatherSituation
     
 
 
-    func downloadData(completed: @escaping DownloadComplete)
+    func downloadData(for specificURL: String,completed: @escaping DownloadComplete)
     {
         //Download with Alamofire
-        let currentURL = URL(string: current_weather_url)!
+        let currentURL = URL(string: specificURL)!
         
         Alamofire.request(currentURL).responseJSON
        { response in

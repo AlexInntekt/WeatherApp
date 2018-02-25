@@ -37,12 +37,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tbv.delegate = self
         
         updateUI()
+        
+        //createAPICall(ofType: .weatherAndName, "2")
     }
 
     func updateUI()
     {
-        var k = WeatherSituation()
-        k.downloadData {
+        let k = WeatherSituation()
+
+        k.downloadData(for: createAPICall(ofType: .weatherAndName, "Chisinau")) {
             self.cityLabel.text = k._cityName
             self.tempLabel.text = String(format: "%.1f", k._currentTemp) + "°C"
             self.stateLabel.text = k._description
