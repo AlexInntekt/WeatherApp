@@ -18,15 +18,19 @@ class WeatherSituation
     var _description: String!
     var _currentTemp: Double!
     
-    var cityName: String {
-        if _cityName == nil {
+    var cityName: String
+    {
+        if _cityName == nil
+        {
             _cityName = "nil"
         }
         return _cityName
     }
     
-    var date: String {
-        if _date == nil {
+    var date: String
+    {
+        if _date == nil
+        {
             _date = "nil"
         }
         
@@ -40,8 +44,10 @@ class WeatherSituation
         return _date
     }
     
-    var weatherType: String {
-        if _weatherType == nil {
+    var weatherType: String
+    {
+        if _weatherType == nil
+        {
             _weatherType = "nil"
         }
         return _weatherType
@@ -63,7 +69,7 @@ class WeatherSituation
     
 
 
-    func downloadData(for specificURL: String,completed: @escaping DownloadComplete)
+    func downloadDataForCurrentWeather(for specificURL: String,completed: @escaping DownloadComplete)
     {
         //Download with Alamofire
         let currentURL = URL(string: specificURL)!
@@ -71,7 +77,7 @@ class WeatherSituation
         Alamofire.request(currentURL).responseJSON
        { response in
             let result = response.result
-            print(response)
+            //print(response)
             
             if let dictionary = result.value as? Dictionary<String, AnyObject>
             {
@@ -95,6 +101,11 @@ class WeatherSituation
                     {
                         var tempInCelsius = currentTemperatureInKelvin - 273.15
                         self._currentTemp = tempInCelsius
+                    }
+                    
+                    if let kelv = main["temp"] as? Double
+                    {
+                        self._currentTemp = convertKelvinToCelsius(kelv)
                     }
  
                 }

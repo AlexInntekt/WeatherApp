@@ -21,6 +21,11 @@ let                   c = "http://api.openweathermap.org/data/2.5/weather?lat=35
 typealias DownloadComplete = () -> ()
 
 
+func convertKelvinToCelsius(_ x: Double) -> Double
+{
+    let r = x - 273.15;
+    return r
+}
 
 enum callType {
     case forecastAndName

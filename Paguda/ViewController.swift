@@ -25,6 +25,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var stateLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     
+    let currentWeather = WeatherSituation()
+    let forecast = Forecast()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -43,17 +46,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func updateUI()
     {
-        let k = WeatherSituation()
+        
 
-        k.downloadData(for: createAPICall(ofType: .weatherAndName, "Sochi")) {
-            self.cityLabel.text = k._cityName
-            self.tempLabel.text = String(format: "%.1f", k._currentTemp) + "°C"
-            self.stateLabel.text = k._description
-            self.timeLabel.text = String("\(k.date)")
+        //for top main panel:
+        currentWeather.downloadDataForCurrentWeather(for: createAPICall(ofType: .weatherAndName, "Bucharest")) {
+            self.cityLabel.text = self.currentWeather._cityName
+            self.tempLabel.text = String(format: "%.1f", self.currentWeather._currentTemp) + "°C"
+            self.stateLabel.text = self.currentWeather._description
+            self.timeLabel.text = String("\(self.currentWeather.date)")
             
-            self.weatherIcon.image = UIImage(named: "\(k._weatherType!)")
-
-            
+            self.weatherIcon.image = UIImage(named: "\(self.currentWeather._weatherType!)")
+        }
+        
+        
+        //for the tableview forecast:
+        forecast.downloadDataForForecast(for: createAPICall(ofType: .forecastAndName, "Bucharest")) {
+            self.tbv.reloadData()
         }
     }
 
@@ -87,7 +95,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tbv.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath)
+        let cell = tbv.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath) as! WeatherCell
+        
+        cell.dayLabel.text = forecast._date
+        cell.minTempLabel.text = String(format: "%.1f", forecast.minTemp)
+        cell.maxTempLabel.text = String(format: "%.1f", forecast.maxTemp)
+        cell.weatherIconImage.image = UIImage(named: forecast.description)
         
         return cell
     }
