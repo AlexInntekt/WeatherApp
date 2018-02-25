@@ -38,31 +38,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         updateUI()
         
-        //createAPICall(ofType: .weatherAndName, "2")
+        
     }
 
     func updateUI()
     {
         let k = WeatherSituation()
 
-        k.downloadData(for: createAPICall(ofType: .weatherAndName, "Chisinau")) {
+        k.downloadData(for: createAPICall(ofType: .weatherAndName, "Sochi")) {
             self.cityLabel.text = k._cityName
             self.tempLabel.text = String(format: "%.1f", k._currentTemp) + "°C"
             self.stateLabel.text = k._description
             self.timeLabel.text = String("\(k.date)")
             
-            switch k._weatherType
-            {
-            case "Rainy":
-                self.weatherIcon.image = #imageLiteral(resourceName: "rainy clouds")
-            case "Clear":
-                self.weatherIcon.image = #imageLiteral(resourceName: "clearSky")
-            case "Clouds":
-                self.weatherIcon.image = #imageLiteral(resourceName: "clouds")
-            default:
-                self.weatherIcon.image = nil
-            }
-            
+            self.weatherIcon.image = UIImage(named: "\(k._weatherType!)")
+
             
         }
     }

@@ -49,7 +49,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temp°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPx-Z6-hBL">
-                                                    <rect key="frame" x="10" y="124" width="250" height="45"/>
+                                                    <rect key="frame" x="10" y="129" width="250" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="2a0-yz-wBA"/>
                                                         <constraint firstAttribute="width" constant="250" id="JhM-Xd-pBL"/>
@@ -59,7 +59,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPA-Zc-fhT">
-                                                    <rect key="frame" x="10" y="169" width="250" height="40"/>
+                                                    <rect key="frame" x="10" y="174" width="250" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="AgS-Sz-s7f"/>
                                                         <constraint firstAttribute="width" constant="250" id="E5u-67-RnX"/>
@@ -68,7 +68,7 @@
                                                     <color key="textColor" red="0.76470588240000004" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="eql-kJ-52C">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clear" translatesAutoresizingMaskIntoConstraints="NO" id="eql-kJ-52C">
                                                     <rect key="frame" x="158.5" y="35" width="116.5" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="eql-kJ-52C" secondAttribute="height" multiplier="167:100" id="M0t-xf-FNm"/>
@@ -81,14 +81,14 @@
                                                         <constraint firstAttribute="height" constant="28" id="XOJ-EF-HKM"/>
                                                         <constraint firstAttribute="width" constant="250" id="xPl-on-1SC"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
                                                     <color key="textColor" red="0.76470588240000004" green="0.92941176469999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="prv-6q-dVc" firstAttribute="top" secondItem="MVv-it-qaY" secondAttribute="top" constant="7" id="0DS-uT-Rrl"/>
-                                                <constraint firstAttribute="bottom" secondItem="MPA-Zc-fhT" secondAttribute="bottom" constant="10" id="2KM-LH-c8W"/>
+                                                <constraint firstAttribute="bottom" secondItem="MPA-Zc-fhT" secondAttribute="bottom" constant="5" id="2KM-LH-c8W"/>
                                                 <constraint firstItem="MPA-Zc-fhT" firstAttribute="top" secondItem="aPx-Z6-hBL" secondAttribute="bottom" id="8aE-Ma-4Vk"/>
                                                 <constraint firstItem="prv-6q-dVc" firstAttribute="leading" secondItem="MVv-it-qaY" secondAttribute="leading" constant="10" id="FlM-We-moi"/>
                                                 <constraint firstItem="MPA-Zc-fhT" firstAttribute="leading" secondItem="MVv-it-qaY" secondAttribute="leading" constant="10" id="LnK-UX-zHp"/>
@@ -186,7 +186,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clouds" width="256" height="256"/>
+        <image name="Clear" width="256" height="256"/>
         <image name="wallpaper-weather-3" width="1800" height="1199"/>
     </resources>
 </document>
