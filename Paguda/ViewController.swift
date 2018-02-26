@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
-    
+   
     private var gradient = CAGradientLayer()
 
     @IBOutlet var topView: UIView!
@@ -25,15 +25,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var stateLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     
-    let currentWeather = WeatherSituation()
-    let forecast = Forecast()
+    
+    
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        print(current_weather_url)
         
         setUp()
         tbv.dataSource = self
@@ -50,19 +49,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         //for top main panel:
         currentWeather.downloadDataForCurrentWeather(for: createAPICall(ofType: .weatherAndName, "Bucharest")) {
-            self.cityLabel.text = self.currentWeather._cityName
-            self.tempLabel.text = String(format: "%.1f", self.currentWeather._currentTemp) + "°C"
-            self.stateLabel.text = self.currentWeather._description
-            self.timeLabel.text = String("\(self.currentWeather.date)")
+            self.cityLabel.text = currentWeather._cityName!
+            self.tempLabel.text = String(format: "%.1f", currentWeather._currentTemp!) + "°C"
+            self.stateLabel.text = currentWeather._description!
+            self.timeLabel.text = String("\(currentWeather._date!)")
             
-            self.weatherIcon.image = UIImage(named: "\(self.currentWeather._weatherType!)")
+            self.weatherIcon.image = UIImage(named: "\(currentWeather._weatherType!)")
+            
+            self.tbv.reloadData()
         }
         
         
         //for the tableview forecast:
-        forecast.downloadDataForForecast(for: createAPICall(ofType: .forecastAndName, "Bucharest")) {
+        downloadDataForForecast(for: createAPICall(ofType: .forecastAndName, "Bucharest"))
+        {
             self.tbv.reloadData()
+            
+            for obj in forecasts
+            {
+                print("forecasts ",obj._date)
+                
+            }
+            
+            print("\n____________\nkkk ",debuggingString," kkk\n___________\n")
         }
+        
     }
 
     func setUp()
@@ -90,17 +101,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 12
+        return forecasts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tbv.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath) as! WeatherCell
         
-        cell.dayLabel.text = forecast._date
-        cell.minTempLabel.text = String(format: "%.1f", forecast.minTemp)
-        cell.maxTempLabel.text = String(format: "%.1f", forecast.maxTemp)
-        cell.weatherIconImage.image = UIImage(named: forecast.description)
+        cell.dayLabel.text = forecasts[indexPath.row]._date
+        cell.minTempLabel.text = String(format: "%.1f", forecasts[indexPath.row]._minTemp) + "°C"
+        cell.maxTempLabel.text = String(format: "%.1f", forecasts[indexPath.row]._maxTemp) + "°C"
+        cell.weatherIconImage.image = UIImage(named: forecasts[indexPath.row]._description)
         
         return cell
     }

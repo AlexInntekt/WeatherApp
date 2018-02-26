@@ -12,60 +12,75 @@ import Alamofire
 
 class WeatherSituation
 {
-    var _cityName: String!
-    var _date: String!
-    var _weatherType: String!
-    var _description: String!
-    var _currentTemp: Double!
+    var _cityName: String! = "city name"
+    var _date: String! = "Today"
+    var _weatherType: String! = "weather type"
+    var _description: String! = "description"
+    var _currentTemp: Double! = 0.0
     
-    var cityName: String
-    {
-        if _cityName == nil
-        {
-            _cityName = "nil"
-        }
-        return _cityName
-    }
+
     
-    var date: String
+    init()
     {
-        if _date == nil
-        {
-            _date = "nil"
-        }
-        
         let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .long
-            dateFormatter.timeStyle = .none
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
         
         let currentDate = dateFormatter.string(from: Date())
-         self._date = "Today, \(currentDate)"
-        
-        return _date
+        self._date! = "Today, \(currentDate)"
     }
     
-    var weatherType: String
-    {
-        if _weatherType == nil
-        {
-            _weatherType = "nil"
-        }
-        return _weatherType
-    }
-    
-    var description: String {
-        if _description == nil {
-            _description = "nil"
-        }
-        return _description
-    }
-    
-    var currentTemp: Double {
-        if _currentTemp == nil {
-            _currentTemp = 0.0
-        }
-        return _currentTemp
-    }
+    //    var cityName: String
+    //    {
+    //        if _cityName == nil
+    //        {
+    //            _cityName = "nil"
+    //        }
+    //        return _cityName
+    //    }
+//    var date: String
+//    {
+//        if _date == nil
+//        {
+//            _date = "nil"
+//        }
+//
+//        let dateFormatter = DateFormatter()
+//            dateFormatter.dateStyle = .long
+//            dateFormatter.timeStyle = .none
+//
+//        let currentDate = dateFormatter.string(from: Date())
+//         self._date = "Today, \(currentDate)"
+//
+//        return _date
+//    }
+//
+//    var weatherType: String
+//    {
+//        if _weatherType == nil
+//        {
+//            _weatherType = "nil"
+//        }
+//        return _weatherType
+//    }
+//
+//    var description: String
+//    {
+//        if _description == nil
+//        {
+//            _description = "nil"
+//        }
+//        return _description
+//    }
+//
+//    var currentTemp: Double
+//    {
+//        if _currentTemp == nil
+//        {
+//            _currentTemp = 0.0
+//        }
+//        return _currentTemp
+//    }
     
 
 
@@ -109,15 +124,18 @@ class WeatherSituation
                     }
  
                 }
-                
-                
-                
+      
                 
             }
             completed()
         }
         
         
+        
+        
     }
+    
+    
+    
     
 }
