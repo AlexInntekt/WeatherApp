@@ -115,7 +115,7 @@
                                 <rect key="frame" x="0.0" y="219" width="320" height="349"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R32-TO-1l8">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="349"/>
+                                        <rect key="frame" x="0.0" y="10" width="320" height="349"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayCell" id="znJ-Jd-fyO" customClass="WeatherCell" customModule="Paguda" customModuleProvider="target">
@@ -188,9 +188,9 @@
                                     </tableView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="R32-TO-1l8" firstAttribute="top" secondItem="r9c-hE-I9F" secondAttribute="top" constant="10" id="6vZ-eZ-hVT"/>
                                     <constraint firstItem="R32-TO-1l8" firstAttribute="height" secondItem="r9c-hE-I9F" secondAttribute="height" id="9QC-fx-b38"/>
                                     <constraint firstItem="R32-TO-1l8" firstAttribute="centerX" secondItem="r9c-hE-I9F" secondAttribute="centerX" id="JfN-37-1eg"/>
-                                    <constraint firstItem="R32-TO-1l8" firstAttribute="centerY" secondItem="r9c-hE-I9F" secondAttribute="centerY" id="PM9-mh-Mkc"/>
                                     <constraint firstItem="R32-TO-1l8" firstAttribute="width" secondItem="r9c-hE-I9F" secondAttribute="width" id="shB-RW-WYe"/>
                                 </constraints>
                             </view>

@@ -84,7 +84,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         gradient.frame = tbv.superview?.bounds ?? CGRect.null
         //gradient.colors = [UIColor.clear.cgColor, UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor, UIColor.clear.cgColor]
-        gradient.colors = [UIColor.clear.cgColor,  UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor,  UIColor.clear.cgColor]
+        gradient.colors = [UIColor.clear.cgColor,  UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor,  UIColor.clear.cgColor]
         gradient.locations = [0.0, 0.05, 0.15, 0.7, 0.85, 1.0]
         
         tbv.superview?.layer.mask = gradient
