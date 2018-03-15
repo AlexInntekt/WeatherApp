@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate
 {
+    
+    let locationManager = CLLocationManager()
+    var currentLocation = CLLocation()
+    
    
     private var gradient = CAGradientLayer()
 
@@ -28,19 +34,57 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
+    @IBOutlet var compassButton: UIButton!
+    @IBAction func compassButton(_ sender: Any)
+    {
+        locationAuthStatus()
+    }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+      
+    }
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
+        
+        //this is used for getting the coordinates of the current location:
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startMonitoringSignificantLocationChanges()
+        
         setUp()
+        
         tbv.dataSource = self
         tbv.delegate = self
         
-        updateUI()
+        //updateUI()
         
         
+    }
+    
+    func locationAuthStatus()
+    {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
+        {
+            currentLocation = locationManager.location!
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitute = currentLocation.coordinate.longitude
+            
+            print("longitute: ", Location.sharedInstance.longitute  )
+            print("Location.sharedInstance.latitude", Location.sharedInstance.latitude  )
+        }  else
+        {
+            locationManager.requestWhenInUseAuthorization()
+            locationAuthStatus()
+        }
     }
 
     func updateUI()
@@ -48,7 +92,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
 
         //for top main panel:
-        currentWeather.downloadDataForCurrentWeather(for: createAPICall(ofType: .weatherAndName, "Bucharest")) {
+        //currentWeather.downloadDataForCurrentWeather(for: createAPICall(ofType: .weatherAndName, "Bucharest"))
+        currentWeather.downloadDataForCurrentWeather(for: createAPICall(ofType: .weatherAndCoordinates, String(Location.sharedInstance.longitute), String(Location.sharedInstance.latitude) ))
+        {
             self.cityLabel.text = currentWeather._cityName!
             self.tempLabel.text = String(format: "%.1f", currentWeather._currentTemp!) + "°C"
             self.stateLabel.text = currentWeather._description!
@@ -61,7 +107,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         //for the tableview forecast:
-        downloadDataForForecast(for: createAPICall(ofType: .forecastAndName, "Bucharest"))
+        downloadDataForForecast(for: createAPICall(ofType: .forecastAndCoordinates, "22", "37"))
         {
             self.tbv.reloadData()
             

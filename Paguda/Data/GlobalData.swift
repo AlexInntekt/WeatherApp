@@ -7,10 +7,20 @@
 //
 
 import Foundation
-
+import CoreLocation
 
 let currentWeather = WeatherSituation()
- var forecasts = [Forecast]()
+var forecasts = [Forecast]()
 
+var debuggingString = [String]()
 
- var debuggingString = [String]()
+//singleton
+class Location
+{
+    static var sharedInstance = Location()
+    private init(){}
+    
+    var latitude: Double!
+    var longitute: Double!
+}
+
