@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func compassButton(_ sender: Any)
     {
         locationAuthStatus()
-        updateUI()
+        updateUI(with: .weatherAndCoordinates, and: .forecastAndCoordinates)
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
         {
             locationAuthStatus()
-            updateUI()
+            updateUI(with: .weatherAndCoordinates, and: .forecastAndCoordinates)
         }
     }
     
@@ -92,7 +92,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
-    func updateUI()
+    func updateUI(with weatherAPItype: callType, and forecastAPItype: callType)
     {
         
   
