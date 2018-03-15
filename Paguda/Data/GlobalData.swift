@@ -18,9 +18,14 @@ var debuggingString = [String]()
 class Location
 {
     static var sharedInstance = Location()
-    private init(){}
+    init()
+    {
+        latitude = 49
+        longitute = 11
+    }
     
-    var latitude: Double!
-    var longitute: Double!
+    var latitude: Double! = 49
+    var longitute: Double! = 11
+    
 }
 

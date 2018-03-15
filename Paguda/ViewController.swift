@@ -38,11 +38,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func compassButton(_ sender: Any)
     {
         locationAuthStatus()
+        updateUI()
     }
     
     override func viewDidAppear(_ animated: Bool)
     {
-      
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
+        {
+            locationAuthStatus()
+            updateUI()
+        }
     }
     
     
@@ -52,20 +57,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        
-        
         //this is used for getting the coordinates of the current location:
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startMonitoringSignificantLocationChanges()
         
+        
+        
         setUp()
         
         tbv.dataSource = self
         tbv.delegate = self
         
-        //updateUI()
+        
         
         
     }
@@ -78,8 +83,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             Location.sharedInstance.latitude = currentLocation.coordinate.latitude
             Location.sharedInstance.longitute = currentLocation.coordinate.longitude
             
-            print("longitute: ", Location.sharedInstance.longitute  )
-            print("Location.sharedInstance.latitude", Location.sharedInstance.latitude  )
+            print("Location.sharedInstance.longitute: : ", Location.sharedInstance.longitute  )
+            print("Location.sharedInstance.latitude: ", Location.sharedInstance.latitude  )
         }  else
         {
             locationManager.requestWhenInUseAuthorization()
@@ -90,10 +95,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func updateUI()
     {
         
-
+  
         //for top main panel:
         //currentWeather.downloadDataForCurrentWeather(for: createAPICall(ofType: .weatherAndName, "Bucharest"))
-        currentWeather.downloadDataForCurrentWeather(for: createAPICall(ofType: .weatherAndCoordinates, String(Location.sharedInstance.longitute), String(Location.sharedInstance.latitude) ))
+        currentWeather.downloadDataForCurrentWeather(for: createAPICall(ofType: .weatherAndCoordinates, String(Location.sharedInstance.latitude), String(Location.sharedInstance.longitute) ))
         {
             self.cityLabel.text = currentWeather._cityName!
             self.tempLabel.text = String(format: "%.1f", currentWeather._currentTemp!) + "°C"
@@ -107,7 +112,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         //for the tableview forecast:
-        downloadDataForForecast(for: createAPICall(ofType: .forecastAndCoordinates, "22", "37"))
+        downloadDataForForecast(for: createAPICall(ofType: .forecastAndCoordinates, String(Location.sharedInstance.latitude), String(Location.sharedInstance.longitute) ))
         {
             self.tbv.reloadData()
             
