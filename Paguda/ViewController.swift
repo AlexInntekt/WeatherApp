@@ -43,11 +43,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidAppear(_ animated: Bool)
     {
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
-        {
-            locationAuthStatus()
-            updateUI(with: .weatherAndCoordinates, and: .forecastAndCoordinates)
-        }
+
+        locationAuthStatus()
+        updateUI(with: .weatherAndCoordinates, and: .forecastAndCoordinates)
+        
     }
     
     
@@ -77,19 +76,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func locationAuthStatus()
     {
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
+        if(locationManager.location != nil)
         {
-            currentLocation = locationManager.location!
-            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
-            Location.sharedInstance.longitute = currentLocation.coordinate.longitude
-            
-            print("Location.sharedInstance.longitute: : ", Location.sharedInstance.longitute  )
-            print("Location.sharedInstance.latitude: ", Location.sharedInstance.latitude  )
-        }  else
-        {
-            locationManager.requestWhenInUseAuthorization()
-            locationAuthStatus()
+            if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
+            {
+                currentLocation = locationManager.location!
+                Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+                Location.sharedInstance.longitute = currentLocation.coordinate.longitude
+                
+                print("Location.sharedInstance.longitute: : ", Location.sharedInstance.longitute  )
+                print("Location.sharedInstance.latitude: ", Location.sharedInstance.latitude  )
+            }  else
+            {
+                locationManager.requestWhenInUseAuthorization()
+                locationAuthStatus()
+            }
         }
+        
+        
     }
 
     func updateUI(with weatherAPItype: callType, and forecastAPItype: callType)
@@ -107,22 +111,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             self.weatherIcon.image = UIImage(named: "\(currentWeather._weatherType!)")
             
-            self.tbv.reloadData()
+            
         }
         
         
         //for the tableview forecast:
         downloadDataForForecast(for: createAPICall(ofType: .forecastAndCoordinates, String(Location.sharedInstance.latitude), String(Location.sharedInstance.longitute) ))
         {
-            self.tbv.reloadData()
             
+            
+            //for testing:
             for obj in forecasts
             {
-                print("forecasts ",obj._date)
+                print("forecasts ",obj._description)
                 
             }
             
             print("\n____________\nkkk ",debuggingString," kkk\n___________\n")
+
+            self.tbv.reloadData()
         }
         
     }

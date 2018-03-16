@@ -29,59 +29,7 @@ class WeatherSituation
         let currentDate = dateFormatter.string(from: Date())
         self._date! = "Today, \(currentDate)"
     }
-    
-    //    var cityName: String
-    //    {
-    //        if _cityName == nil
-    //        {
-    //            _cityName = "nil"
-    //        }
-    //        return _cityName
-    //    }
-//    var date: String
-//    {
-//        if _date == nil
-//        {
-//            _date = "nil"
-//        }
-//
-//        let dateFormatter = DateFormatter()
-//            dateFormatter.dateStyle = .long
-//            dateFormatter.timeStyle = .none
-//
-//        let currentDate = dateFormatter.string(from: Date())
-//         self._date = "Today, \(currentDate)"
-//
-//        return _date
-//    }
-//
-//    var weatherType: String
-//    {
-//        if _weatherType == nil
-//        {
-//            _weatherType = "nil"
-//        }
-//        return _weatherType
-//    }
-//
-//    var description: String
-//    {
-//        if _description == nil
-//        {
-//            _description = "nil"
-//        }
-//        return _description
-//    }
-//
-//    var currentTemp: Double
-//    {
-//        if _currentTemp == nil
-//        {
-//            _currentTemp = 0.0
-//        }
-//        return _currentTemp
-//    }
-    
+
 
 
     func downloadDataForCurrentWeather(for specificURL: String,completed: @escaping DownloadComplete)

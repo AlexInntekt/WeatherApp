@@ -30,6 +30,8 @@ import Alamofire
 
 func downloadDataForForecast(for specificURL: String,completed: @escaping DownloadComplete) 
 {
+    forecasts.removeAll()
+    
     var arrayWithForecast = [Forecast]()
     
     //Download with Alamofire
@@ -77,7 +79,7 @@ func downloadDataForForecast(for specificURL: String,completed: @escaping Downlo
                         }
                         
                         forecasts.append(currentForecast)
-                        print("#1: ",currentForecast._date)
+                        print("#\(index): ",currentForecast._date)
                         debuggingString.append(currentForecast._date)
                         index += 1
                     }

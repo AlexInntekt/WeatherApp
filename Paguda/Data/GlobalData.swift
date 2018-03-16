@@ -20,12 +20,12 @@ class Location
     static var sharedInstance = Location()
     init()
     {
-        latitude = 49
-        longitute = 11
+        latitude = 67
+        longitute = 64
     }
     
-    var latitude: Double! = 49
-    var longitute: Double! = 11
+    var latitude: Double! = 67
+    var longitute: Double! = 64
     
 }
 
