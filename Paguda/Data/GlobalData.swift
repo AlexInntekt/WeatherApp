@@ -19,13 +19,13 @@ class Location
 {
     static var sharedInstance = Location()
     init()
-    {
-        latitude = 67
-        longitute = 64
+    {   //default location: Bucharest
+        latitude = 44.4
+        longitute = 26.1
     }
     
-    var latitude: Double! = 67
-    var longitute: Double! = 64
+    var latitude: Double! = 44.4
+    var longitute: Double! = 26.1
     
 }
 
