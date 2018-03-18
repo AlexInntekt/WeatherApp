@@ -56,6 +56,8 @@ class WeatherSituation
                     
                     self._description = weather[0]["description"] as! String
                     self._weatherType = weather[0]["main"] as! String
+                    
+                    print("ewgwet4y34y: ", self._weatherType)
                 }
                 
                 if let main = dictionary["main"] as? Dictionary<String, AnyObject>

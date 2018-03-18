@@ -87,7 +87,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwO-V6-if5">
-                                                    <rect key="frame" x="280" y="187.5" width="45" height="45"/>
+                                                    <rect key="frame" x="280" y="186.5" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="jwO-V6-if5" secondAttribute="height" id="KOd-Og-ODS"/>
                                                     </constraints>
@@ -113,7 +113,6 @@
                                                 <constraint firstItem="aPx-Z6-hBL" firstAttribute="leading" secondItem="MVv-it-qaY" secondAttribute="leading" constant="10" id="zW0-vl-aWE"/>
                                             </constraints>
                                         </view>
-                                        <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="0.28082191780821919" colorSpace="custom" customColorSpace="sRGB"/>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
                                 </subviews>
@@ -149,14 +148,14 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sc2" translatesAutoresizingMaskIntoConstraints="NO" id="eLN-8R-4GS">
-                                                            <rect key="frame" x="250" y="10" width="60" height="60"/>
+                                                            <rect key="frame" x="305" y="10" width="60" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="LkK-lX-gES"/>
                                                                 <constraint firstAttribute="height" constant="60" id="kRq-8x-brU"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max: 10°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgy-5M-Kg2">
-                                                            <rect key="frame" x="130" y="17" width="80" height="25"/>
+                                                            <rect key="frame" x="157.5" y="17" width="80" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="0Fl-cj-aNM"/>
                                                                 <constraint firstAttribute="width" constant="80" id="FeV-hT-g36"/>
@@ -166,7 +165,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min: -5°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwa-uj-uGJ">
-                                                            <rect key="frame" x="130" y="42" width="80" height="25"/>
+                                                            <rect key="frame" x="157.5" y="42" width="80" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="80" id="5i4-jE-Yqk"/>
                                                                 <constraint firstAttribute="height" constant="25" id="QAx-s1-P0E"/>
