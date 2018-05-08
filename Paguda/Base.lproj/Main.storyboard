@@ -322,16 +322,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8z-Rb-zD3" customClass="UIViewX" customModule="Paguda" customModuleProvider="target">
-                                <rect key="frame" x="30" y="30" width="315" height="250"/>
+                                <rect key="frame" x="30" y="30" width="315" height="170"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qoz-RU-TOG">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="170"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="05z-5X-ggi">
-                                            <rect key="frame" x="0.0" y="0.0" width="315" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="315" height="170"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKF-fr-kgj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="250"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="170"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the weather in a specific place on the planet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfM-JQ-vXc">
                                                             <rect key="frame" x="10" y="10" width="295" height="75"/>
@@ -395,10 +395,87 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Qoz-RU-TOG" secondAttribute="bottom" id="6i7-fB-jvg"/>
-                                    <constraint firstAttribute="height" constant="250" id="TN1-ff-U86"/>
+                                    <constraint firstAttribute="height" constant="170" id="TN1-ff-U86"/>
                                     <constraint firstItem="Qoz-RU-TOG" firstAttribute="leading" secondItem="K8z-Rb-zD3" secondAttribute="leading" id="q4i-e2-IiJ"/>
                                     <constraint firstItem="Qoz-RU-TOG" firstAttribute="top" secondItem="K8z-Rb-zD3" secondAttribute="top" id="rRL-fG-8nk"/>
                                     <constraint firstAttribute="trailing" secondItem="Qoz-RU-TOG" secondAttribute="trailing" id="xPD-zw-7Tg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7W-v3-3eU" customClass="UIViewX" customModule="Paguda" customModuleProvider="target">
+                                <rect key="frame" x="30" y="210" width="315" height="364.5"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39h-ch-jEA">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="364.5"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ugk-3C-gNK">
+                                            <rect key="frame" x="0.0" y="0.0" width="315" height="364.5"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idZ-p7-fU3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="364.5"/>
+                                                    <subviews>
+                                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zKr-GS-5IX">
+                                                            <rect key="frame" x="3" y="0.0" width="309" height="364.5"/>
+                                                        </mapView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a location and display its current weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-6g-zgS">
+                                                            <rect key="frame" x="10" y="10" width="295" height="75"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="75" id="B6S-D4-crD"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-93-vjg" customClass="UIButtonX" customModule="Paguda" customModuleProvider="target">
+                                                            <rect key="frame" x="135" y="315" width="45" height="39"/>
+                                                            <color key="backgroundColor" white="1" alpha="0.64383561639999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Xaf-93-vjg" secondAttribute="height" multiplier="23:20" id="bgW-fy-cIl"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                            <state key="normal" title="Go">
+                                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="16"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="r7S-6g-zgS" secondAttribute="trailing" constant="10" id="OBP-df-v3n"/>
+                                                        <constraint firstItem="r7S-6g-zgS" firstAttribute="top" secondItem="idZ-p7-fU3" secondAttribute="top" constant="10" id="SVt-8C-U9j"/>
+                                                        <constraint firstItem="r7S-6g-zgS" firstAttribute="leading" secondItem="idZ-p7-fU3" secondAttribute="leading" constant="10" id="TlK-Gd-3Eh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Xaf-93-vjg" secondAttribute="bottom" constant="10" id="Uox-vp-9jk"/>
+                                                        <constraint firstItem="zKr-GS-5IX" firstAttribute="leading" secondItem="idZ-p7-fU3" secondAttribute="leading" constant="3" id="cUD-4Z-28b"/>
+                                                        <constraint firstItem="Xaf-93-vjg" firstAttribute="centerX" secondItem="idZ-p7-fU3" secondAttribute="centerX" id="fWh-ra-DAq"/>
+                                                        <constraint firstItem="zKr-GS-5IX" firstAttribute="top" secondItem="idZ-p7-fU3" secondAttribute="top" id="h7a-HC-PaW"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zKr-GS-5IX" secondAttribute="bottom" id="kw1-KB-Auo"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zKr-GS-5IX" secondAttribute="trailing" constant="3" id="lTg-a4-DcU"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="idZ-p7-fU3" secondAttribute="trailing" id="Jo5-kQ-gx1"/>
+                                                <constraint firstAttribute="bottom" secondItem="idZ-p7-fU3" secondAttribute="bottom" id="NfG-4J-ejX"/>
+                                                <constraint firstItem="idZ-p7-fU3" firstAttribute="leading" secondItem="ugk-3C-gNK" secondAttribute="leading" id="bOv-8A-cRJ"/>
+                                                <constraint firstItem="idZ-p7-fU3" firstAttribute="top" secondItem="ugk-3C-gNK" secondAttribute="top" id="g9Q-fT-YHk"/>
+                                            </constraints>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="39h-ch-jEA" firstAttribute="leading" secondItem="D7W-v3-3eU" secondAttribute="leading" id="M9G-vP-k8d"/>
+                                    <constraint firstAttribute="bottom" secondItem="39h-ch-jEA" secondAttribute="bottom" id="ZRI-HZ-4N8"/>
+                                    <constraint firstAttribute="trailing" secondItem="39h-ch-jEA" secondAttribute="trailing" id="fjh-Jz-4FA"/>
+                                    <constraint firstItem="39h-ch-jEA" firstAttribute="top" secondItem="D7W-v3-3eU" secondAttribute="top" id="rgf-8s-ebt"/>
+                                    <constraint firstAttribute="width" constant="315" id="xgu-03-NzS"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -466,13 +543,17 @@
                         <constraints>
                             <constraint firstItem="ugB-TA-fbf" firstAttribute="leading" secondItem="t4Q-v5-iJh" secondAttribute="leading" id="0ig-h8-Bjc"/>
                             <constraint firstItem="lGW-Oh-xkd" firstAttribute="trailing" secondItem="K8z-Rb-zD3" secondAttribute="trailing" constant="30" id="5c0-Vs-adH"/>
+                            <constraint firstItem="DSw-tf-s0E" firstAttribute="top" secondItem="D7W-v3-3eU" secondAttribute="bottom" constant="30" id="5du-V5-QoT"/>
+                            <constraint firstItem="D7W-v3-3eU" firstAttribute="leading" secondItem="lGW-Oh-xkd" secondAttribute="leading" constant="30" id="7sV-cE-6JO"/>
                             <constraint firstItem="lGW-Oh-xkd" firstAttribute="bottom" secondItem="DSw-tf-s0E" secondAttribute="bottom" id="8vK-T0-x2w"/>
                             <constraint firstItem="ugB-TA-fbf" firstAttribute="top" secondItem="t4Q-v5-iJh" secondAttribute="top" id="C9k-Gm-WRA"/>
                             <constraint firstAttribute="trailing" secondItem="ugB-TA-fbf" secondAttribute="trailing" id="Q2y-FT-s9d"/>
                             <constraint firstItem="DSw-tf-s0E" firstAttribute="leading" secondItem="lGW-Oh-xkd" secondAttribute="leading" id="QiF-h0-LWf"/>
+                            <constraint firstItem="lGW-Oh-xkd" firstAttribute="trailing" secondItem="D7W-v3-3eU" secondAttribute="trailing" constant="30" id="Xue-cd-hUm"/>
                             <constraint firstItem="K8z-Rb-zD3" firstAttribute="leading" secondItem="lGW-Oh-xkd" secondAttribute="leading" constant="30" id="Zgn-qd-LGB"/>
                             <constraint firstAttribute="trailing" secondItem="DSw-tf-s0E" secondAttribute="trailing" id="daC-4J-ueH"/>
                             <constraint firstItem="K8z-Rb-zD3" firstAttribute="top" secondItem="t4Q-v5-iJh" secondAttribute="top" constant="30" id="fDr-m4-f70"/>
+                            <constraint firstItem="D7W-v3-3eU" firstAttribute="top" secondItem="K8z-Rb-zD3" secondAttribute="bottom" constant="10" id="iLo-Cw-BKz"/>
                             <constraint firstAttribute="bottom" secondItem="ugB-TA-fbf" secondAttribute="bottom" id="zVz-h4-pAp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lGW-Oh-xkd"/>
@@ -621,7 +702,7 @@
         <image name="wallpaper-weather-3" width="1800" height="1199"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6if-kg-FtK"/>
+        <segue reference="0Hb-G2-4bh"/>
         <segue reference="bJQ-5g-aDR"/>
         <segue reference="w0K-Oy-cQt"/>
     </inferredMetricsTieBreakers>
