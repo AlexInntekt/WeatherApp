@@ -348,6 +348,7 @@
                                                                 <constraint firstAttribute="height" constant="40" id="N7P-sx-vNI"/>
                                                             </constraints>
                                                             <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olm-ny-7BU" customClass="UIButtonX" customModule="Paguda" customModuleProvider="target">
@@ -458,6 +459,11 @@
                                                         <constraint firstAttribute="bottom" secondItem="zKr-GS-5IX" secondAttribute="bottom" id="kw1-KB-Auo"/>
                                                         <constraint firstAttribute="trailing" secondItem="zKr-GS-5IX" secondAttribute="trailing" constant="3" id="lTg-a4-DcU"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="subviews">
+                                                            <exclude reference="zKr-GS-5IX"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                             </subviews>
                                             <constraints>
