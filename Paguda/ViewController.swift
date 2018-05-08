@@ -33,6 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var timeLabel: UILabel!
     
     
+    @IBOutlet var coordinatesLabel: UILabel!
     
     
     @IBOutlet var compassButton: UIButton!
@@ -102,6 +103,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.timeLabel.text = String("\(currentWeather._date!)")
             
             self.weatherIcon.image = UIImage(named: "\(currentWeather._weatherType!)")
+            
+            var coordinatesMessage = String()
+                coordinatesMessage = "lat: " + String(currentWeather._lat!)
+                coordinatesMessage += "; long: " + String(currentWeather._lon!)
+                self.coordinatesLabel.text = coordinatesMessage
             
             
         }

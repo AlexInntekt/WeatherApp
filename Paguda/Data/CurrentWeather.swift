@@ -17,7 +17,8 @@ class WeatherSituation
     var _weatherType: String! = "weather type"
     var _description: String! = "description"
     var _currentTemp: Double! = 0.0
-    
+    var _lat: String! = "na"
+    var _lon: String! = "na"
 
     
     init()
@@ -44,6 +45,14 @@ class WeatherSituation
             
             if let dictionary = result.value as? Dictionary<String, AnyObject>
             {
+                if let coord = dictionary["coord"] as? Dictionary<String, AnyObject>
+                {
+                    
+                    self._lon = String(describing: coord["lon"]!) as! String
+                    self._lat = String(describing: coord["lat"]!) as! String
+                   
+                }
+                
                 if let name = dictionary["name"] as? String
                 {
           
@@ -57,7 +66,6 @@ class WeatherSituation
                     self._description = weather[0]["description"] as! String
                     self._weatherType = weather[0]["main"] as! String
                     
-                    print("ewgwet4y34y: ", self._weatherType)
                 }
                 
                 if let main = dictionary["main"] as? Dictionary<String, AnyObject>
