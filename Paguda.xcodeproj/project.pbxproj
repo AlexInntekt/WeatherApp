@@ -21,6 +21,7 @@
 		B2523B74203F38E700568576 /* PagudaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2523B73203F38E700568576 /* PagudaUITests.swift */; };
 		B25FC68520407D2E006E4B4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FC68420407D2E006E4B4D /* Constants.swift */; };
 		B25FC6872040813F006E4B4D /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25FC6862040813F006E4B4D /* CurrentWeather.swift */; };
+		B271A60520A22A4D00EE7D60 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B271A60420A22A4D00EE7D60 /* UIViewX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		B2523B75203F38E700568576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B25FC68420407D2E006E4B4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B25FC6862040813F006E4B4D /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		B271A60420A22A4D00EE7D60 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		B275943ACFE2F6FC13B2DF62 /* Pods-Paguda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paguda.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paguda/Pods-Paguda.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 		B2216F9C2042EC00009792DA /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B271A60420A22A4D00EE7D60 /* UIViewX.swift */,
 				B2216F9D2042FEEA009792DA /* GlobalData.swift */,
 				B25FC68420407D2E006E4B4D /* Constants.swift */,
 				B2216F9A2042EBF9009792DA /* Forecast.swift */,
@@ -374,6 +377,7 @@
 				B2523B59203F38E700568576 /* Paguda.xcdatamodeld in Sources */,
 				B2216F9E2042FEEA009792DA /* GlobalData.swift in Sources */,
 				B25FC68520407D2E006E4B4D /* Constants.swift in Sources */,
+				B271A60520A22A4D00EE7D60 /* UIViewX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
