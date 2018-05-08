@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var currentLocation = CLLocation()
     let locationManager = CLLocationManager()
     
+    var specificLocation: CLLocationCoordinate2D?
    
     private var gradient = CAGradientLayer()
 
@@ -44,8 +45,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidAppear(_ animated: Bool)
     {
 
+        print("hg902hg2hg9023hg90: ",specificLocation)
+        
         locationAuthStatus()
-        setSpecificLocation(47.003670,  28.907089)
+        
+        if let location = specificLocation
+        {
+            setSpecificLocation(location.latitude,  location.longitude)
+        }
+        
         updateUI(with: .weatherAndCoordinates, and: .forecastAndCoordinates)
         
     }

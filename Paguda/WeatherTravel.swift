@@ -20,14 +20,14 @@ class WeatherTravel: UIViewController
     {
         if let text=textField.text
         {
-            getCoordinateFrom(address: "Rio de Janeiro, Brazil")
+            getCoordinateFrom(address: text)
             { coordinate, error in
                 guard let coordinate = coordinate, error == nil else { return }
                 // don't forget to update the UI from the main thread
                 DispatchQueue.main.async
                 {
-                    print("fn2903gh203hg ",coordinate) // CLLocationCoordinate2D(latitude: -22.910863800000001, longitude: -43.204543600000001)
-                    
+                    print("2938gh23gh Coordinates of location name: ",coordinate)
+                    self.performSegue(withIdentifier: "find", sender: coordinate)
                 }
             }
         }
@@ -55,6 +55,18 @@ class WeatherTravel: UIViewController
         }
     }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier=="find"
+        {
+            let defVC = segue.destination as! ViewController
+            defVC.specificLocation = sender as! CLLocationCoordinate2D
+        }
+        
+        
+        
+    }
     
 
 }

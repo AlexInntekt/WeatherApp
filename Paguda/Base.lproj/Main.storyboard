@@ -467,6 +467,7 @@
                     <connections>
                         <outlet property="go" destination="olm-ny-7BU" id="tH8-40-Tow"/>
                         <outlet property="textField" destination="H3c-Uv-mxy" id="whT-Lz-7XM"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="find" id="w0K-Oy-cQt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfF-uI-ENl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -607,8 +608,8 @@
         <image name="wallpaper-weather-3" width="1800" height="1199"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Hb-G2-4bh"/>
+        <segue reference="6if-kg-FtK"/>
         <segue reference="uY4-M4-dQf"/>
-        <segue reference="BjJ-8Z-PVh"/>
+        <segue reference="w0K-Oy-cQt"/>
     </inferredMetricsTieBreakers>
 </document>
