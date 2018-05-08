@@ -8,6 +8,11 @@
 
 import Foundation
 import CoreLocation
+import UIKit
+
+
+
+
 
 let currentWeather = WeatherSituation()
 var forecasts = [Forecast]()

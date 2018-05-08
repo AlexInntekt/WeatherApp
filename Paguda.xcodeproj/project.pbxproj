@@ -11,6 +11,9 @@
 		B2216F992042E997009792DA /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2216F982042E997009792DA /* WeatherCell.swift */; };
 		B2216F9B2042EBF9009792DA /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2216F9A2042EBF9009792DA /* Forecast.swift */; };
 		B2216F9E2042FEEA009792DA /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2216F9D2042FEEA009792DA /* GlobalData.swift */; };
+		B242522520A23B7700788CD6 /* WeatherTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242522420A23B7700788CD6 /* WeatherTravel.swift */; };
+		B242522720A23D5500788CD6 /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242522620A23D5500788CD6 /* UIButtonX.swift */; };
+		B242522B20A23EC600788CD6 /* AppMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242522A20A23EC600788CD6 /* AppMethods.swift */; };
 		B2523B51203F38E700568576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2523B50203F38E700568576 /* AppDelegate.swift */; };
 		B2523B53203F38E700568576 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2523B52203F38E700568576 /* ViewController.swift */; };
 		B2523B56203F38E700568576 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2523B54203F38E700568576 /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 		B2216F982042E997009792DA /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		B2216F9A2042EBF9009792DA /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		B2216F9D2042FEEA009792DA /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
+		B242522420A23B7700788CD6 /* WeatherTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTravel.swift; sourceTree = "<group>"; };
+		B242522620A23D5500788CD6 /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
+		B242522A20A23EC600788CD6 /* AppMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMethods.swift; sourceTree = "<group>"; };
 		B2523B4D203F38E700568576 /* Paguda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paguda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2523B50203F38E700568576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2523B52203F38E700568576 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +119,6 @@
 		B2216F9C2042EC00009792DA /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B271A60420A22A4D00EE7D60 /* UIViewX.swift */,
 				B2216F9D2042FEEA009792DA /* GlobalData.swift */,
 				B25FC68420407D2E006E4B4D /* Constants.swift */,
 				B2216F9A2042EBF9009792DA /* Forecast.swift */,
@@ -149,10 +154,14 @@
 			children = (
 				B2523B50203F38E700568576 /* AppDelegate.swift */,
 				B2523B52203F38E700568576 /* ViewController.swift */,
+				B242522A20A23EC600788CD6 /* AppMethods.swift */,
+				B242522420A23B7700788CD6 /* WeatherTravel.swift */,
 				B2523B54203F38E700568576 /* Main.storyboard */,
 				B2216F982042E997009792DA /* WeatherCell.swift */,
 				B2216F9C2042EC00009792DA /* Data */,
 				B2523B5A203F38E700568576 /* Assets.xcassets */,
+				B271A60420A22A4D00EE7D60 /* UIViewX.swift */,
+				B242522620A23D5500788CD6 /* UIButtonX.swift */,
 				B2523B5C203F38E700568576 /* LaunchScreen.storyboard */,
 				B2523B5F203F38E700568576 /* Info.plist */,
 				B2523B57203F38E700568576 /* Paguda.xcdatamodeld */,
@@ -369,7 +378,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B242522520A23B7700788CD6 /* WeatherTravel.swift in Sources */,
+				B242522B20A23EC600788CD6 /* AppMethods.swift in Sources */,
 				B2523B53203F38E700568576 /* ViewController.swift in Sources */,
+				B242522720A23D5500788CD6 /* UIButtonX.swift in Sources */,
 				B25FC6872040813F006E4B4D /* CurrentWeather.swift in Sources */,
 				B2216F9B2042EBF9009792DA /* Forecast.swift in Sources */,
 				B2216F992042E997009792DA /* WeatherCell.swift in Sources */,

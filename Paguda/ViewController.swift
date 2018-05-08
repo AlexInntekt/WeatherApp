@@ -13,8 +13,8 @@ import CoreLocation
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate
 {
     
-    let locationManager = CLLocationManager()
     var currentLocation = CLLocation()
+    let locationManager = CLLocationManager()
     
    
     private var gradient = CAGradientLayer()
@@ -45,6 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
 
         locationAuthStatus()
+        setSpecificLocation(47.003670,  28.907089)
         updateUI(with: .weatherAndCoordinates, and: .forecastAndCoordinates)
         
     }
@@ -55,6 +56,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+
         
         //this is used for getting the coordinates of the current location:
         locationManager.delegate = self
@@ -74,27 +76,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    func locationAuthStatus()
-    {
-        if(locationManager.location != nil)
-        {
-            if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
-            {
-                currentLocation = locationManager.location!
-                Location.sharedInstance.latitude = currentLocation.coordinate.latitude
-                Location.sharedInstance.longitute = currentLocation.coordinate.longitude
-                
-                print("Location.sharedInstance.longitute: : ", Location.sharedInstance.longitute  )
-                print("Location.sharedInstance.latitude: ", Location.sharedInstance.latitude  )
-            }  else
-            {
-                locationManager.requestWhenInUseAuthorization()
-                locationAuthStatus()
-            }
-        }
-        
-        
-    }
+    
+    
+    
 
     func updateUI(with weatherAPItype: callType, and forecastAPItype: callType)
     {
@@ -175,6 +159,48 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
+    
+    func setSpecificLocation(_ lat: Double, _ long: Double)
+    {
+        if(locationManager.location != nil)
+        {
+            if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
+            {
+                currentLocation = locationManager.location!
+                Location.sharedInstance.latitude = lat
+                Location.sharedInstance.longitute = long
+                
+                print("Location.sharedInstance.longitute: : ", Location.sharedInstance.longitute  )
+                print("Location.sharedInstance.latitude: ", Location.sharedInstance.latitude  )
+            }  else
+            {
+                locationManager.requestWhenInUseAuthorization()
+                locationAuthStatus()
+            }
+        }
+    }
+    
+    func locationAuthStatus()
+    {
+        if(locationManager.location != nil)
+        {
+            if CLLocationManager.authorizationStatus() == .authorizedWhenInUse
+            {
+                currentLocation = locationManager.location!
+                Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+                Location.sharedInstance.longitute = currentLocation.coordinate.longitude
+                
+                print("Location.sharedInstance.longitute: : ", Location.sharedInstance.longitute  )
+                print("Location.sharedInstance.latitude: ", Location.sharedInstance.latitude  )
+            }  else
+            {
+                locationManager.requestWhenInUseAuthorization()
+                locationAuthStatus()
+            }
+        }
+        
+        
+    }
 
 
 }

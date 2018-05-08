@@ -297,10 +297,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Weather Travel-->
         <scene sceneID="vai-V6-8eR">
             <objects>
-                <viewController id="9My-fu-0aT" sceneMemberID="viewController">
+                <viewController id="9My-fu-0aT" customClass="WeatherTravel" customModule="Paguda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t4Q-v5-iJh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,6 +319,55 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKF-fr-kgj">
                                                     <rect key="frame" x="0.0" y="0.0" width="315" height="250"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the weather in a specific place on the planet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfM-JQ-vXc">
+                                                            <rect key="frame" x="10" y="10" width="295" height="75"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="75" id="tO1-Qe-grs"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name of city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3c-Uv-mxy">
+                                                            <rect key="frame" x="10" y="93" width="239" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="N7P-sx-vNI"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olm-ny-7BU" customClass="UIButtonX" customModule="Paguda" customModuleProvider="target">
+                                                            <rect key="frame" x="259" y="93" width="46" height="40"/>
+                                                            <color key="backgroundColor" white="1" alpha="0.64383561639999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="olm-ny-7BU" secondAttribute="height" multiplier="23:20" id="vuP-NB-L4i"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                            <state key="normal" title="Go">
+                                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="16"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="go:" destination="9My-fu-0aT" eventType="touchUpInside" id="eQv-mH-EB4"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="MfM-JQ-vXc" firstAttribute="leading" secondItem="UKF-fr-kgj" secondAttribute="leading" constant="10" id="1bB-t5-VJW"/>
+                                                        <constraint firstItem="olm-ny-7BU" firstAttribute="centerY" secondItem="H3c-Uv-mxy" secondAttribute="centerY" id="QAK-wa-Y4u"/>
+                                                        <constraint firstItem="H3c-Uv-mxy" firstAttribute="leading" secondItem="UKF-fr-kgj" secondAttribute="leading" constant="10" id="T1m-cu-9dC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="olm-ny-7BU" secondAttribute="trailing" constant="10" id="XJd-cX-8fU"/>
+                                                        <constraint firstItem="olm-ny-7BU" firstAttribute="height" secondItem="H3c-Uv-mxy" secondAttribute="height" id="bGK-aV-XXF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="MfM-JQ-vXc" secondAttribute="trailing" constant="10" id="dD7-OH-T5O"/>
+                                                        <constraint firstItem="olm-ny-7BU" firstAttribute="leading" secondItem="H3c-Uv-mxy" secondAttribute="trailing" constant="10" id="li7-wz-cBJ"/>
+                                                        <constraint firstItem="H3c-Uv-mxy" firstAttribute="top" secondItem="MfM-JQ-vXc" secondAttribute="bottom" constant="8" id="pxY-hX-KXs"/>
+                                                        <constraint firstItem="MfM-JQ-vXc" firstAttribute="top" secondItem="UKF-fr-kgj" secondAttribute="top" constant="10" id="vAy-nJ-xst"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -415,6 +464,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lGW-Oh-xkd"/>
                     </view>
+                    <connections>
+                        <outlet property="go" destination="olm-ny-7BU" id="tH8-40-Tow"/>
+                        <outlet property="textField" destination="H3c-Uv-mxy" id="whT-Lz-7XM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfF-uI-ENl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -492,7 +545,7 @@
                                     <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKJ-KS-gk0">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="500.5"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="N0U-aR-vZ8">
-                                            <rect key="frame" x="0.0" y="0.0" width="315" height="500"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="315" height="500.5"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QlX-FG-kIK">
@@ -554,8 +607,8 @@
         <image name="wallpaper-weather-3" width="1800" height="1199"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6if-kg-FtK"/>
+        <segue reference="0Hb-G2-4bh"/>
         <segue reference="uY4-M4-dQf"/>
-        <segue reference="E5S-z3-qle"/>
+        <segue reference="BjJ-8Z-PVh"/>
     </inferredMetricsTieBreakers>
 </document>
