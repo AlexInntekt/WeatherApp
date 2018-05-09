@@ -322,28 +322,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8z-Rb-zD3" customClass="UIViewX" customModule="Paguda" customModuleProvider="target">
-                                <rect key="frame" x="30" y="30" width="315" height="170"/>
+                                <rect key="frame" x="30" y="30" width="315" height="130"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qoz-RU-TOG">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="170"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="130"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="05z-5X-ggi">
-                                            <rect key="frame" x="0.0" y="0.0" width="315" height="170"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="315" height="130"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKF-fr-kgj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="170"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="130"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the weather in a specific place on the planet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfM-JQ-vXc">
-                                                            <rect key="frame" x="10" y="10" width="295" height="75"/>
+                                                            <rect key="frame" x="10" y="10" width="295" height="50"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="75" id="tO1-Qe-grs"/>
+                                                                <constraint firstAttribute="height" constant="50" id="tO1-Qe-grs"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name of city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3c-Uv-mxy">
-                                                            <rect key="frame" x="10" y="93" width="239" height="40"/>
+                                                            <rect key="frame" x="10" y="68" width="239" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="N7P-sx-vNI"/>
                                                             </constraints>
@@ -352,7 +352,7 @@
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olm-ny-7BU" customClass="UIButtonX" customModule="Paguda" customModuleProvider="target">
-                                                            <rect key="frame" x="259" y="93" width="46" height="40"/>
+                                                            <rect key="frame" x="259" y="68" width="46" height="40"/>
                                                             <color key="backgroundColor" white="1" alpha="0.64383561639999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="olm-ny-7BU" secondAttribute="height" multiplier="23:20" id="vuP-NB-L4i"/>
@@ -396,43 +396,43 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Qoz-RU-TOG" secondAttribute="bottom" id="6i7-fB-jvg"/>
-                                    <constraint firstAttribute="height" constant="170" id="TN1-ff-U86"/>
+                                    <constraint firstAttribute="height" constant="130" id="TN1-ff-U86"/>
                                     <constraint firstItem="Qoz-RU-TOG" firstAttribute="leading" secondItem="K8z-Rb-zD3" secondAttribute="leading" id="q4i-e2-IiJ"/>
                                     <constraint firstItem="Qoz-RU-TOG" firstAttribute="top" secondItem="K8z-Rb-zD3" secondAttribute="top" id="rRL-fG-8nk"/>
                                     <constraint firstAttribute="trailing" secondItem="Qoz-RU-TOG" secondAttribute="trailing" id="xPD-zw-7Tg"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="40"/>
+                                        <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7W-v3-3eU" customClass="UIViewX" customModule="Paguda" customModuleProvider="target">
-                                <rect key="frame" x="30" y="210" width="315" height="364.5"/>
+                                <rect key="frame" x="15" y="170" width="345" height="419.5"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39h-ch-jEA">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="364.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="419.5"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ugk-3C-gNK">
-                                            <rect key="frame" x="0.0" y="0.0" width="315" height="364.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="419.5"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idZ-p7-fU3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="364.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="419.5"/>
                                                     <subviews>
                                                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zKr-GS-5IX">
                                                             <rect key="frame" x="3" y="0.0" width="309" height="364.5"/>
                                                         </mapView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a location and display its current weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-6g-zgS">
-                                                            <rect key="frame" x="10" y="10" width="295" height="75"/>
+                                                            <rect key="frame" x="10" y="10" width="325" height="50"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="75" id="B6S-D4-crD"/>
+                                                                <constraint firstAttribute="height" constant="50" id="B6S-D4-crD"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-93-vjg" customClass="UIButtonX" customModule="Paguda" customModuleProvider="target">
-                                                            <rect key="frame" x="135" y="315" width="45" height="39"/>
+                                                            <rect key="frame" x="150" y="370" width="45" height="39"/>
                                                             <color key="backgroundColor" white="1" alpha="0.64383561639999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Xaf-93-vjg" secondAttribute="height" multiplier="23:20" id="bgW-fy-cIl"/>
@@ -447,17 +447,24 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </button>
+                                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9kp-ti-5IA">
+                                                            <rect key="frame" x="3" y="65" width="339" height="300"/>
+                                                        </mapView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="r7S-6g-zgS" secondAttribute="trailing" constant="10" id="OBP-df-v3n"/>
                                                         <constraint firstItem="r7S-6g-zgS" firstAttribute="top" secondItem="idZ-p7-fU3" secondAttribute="top" constant="10" id="SVt-8C-U9j"/>
                                                         <constraint firstItem="r7S-6g-zgS" firstAttribute="leading" secondItem="idZ-p7-fU3" secondAttribute="leading" constant="10" id="TlK-Gd-3Eh"/>
                                                         <constraint firstAttribute="bottom" secondItem="Xaf-93-vjg" secondAttribute="bottom" constant="10" id="Uox-vp-9jk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9kp-ti-5IA" secondAttribute="trailing" constant="3" id="XZ4-Ph-Lx9"/>
+                                                        <constraint firstItem="Xaf-93-vjg" firstAttribute="top" secondItem="9kp-ti-5IA" secondAttribute="bottom" constant="5" id="Zq5-0D-xJh"/>
                                                         <constraint firstItem="zKr-GS-5IX" firstAttribute="leading" secondItem="idZ-p7-fU3" secondAttribute="leading" constant="3" id="cUD-4Z-28b"/>
                                                         <constraint firstItem="Xaf-93-vjg" firstAttribute="centerX" secondItem="idZ-p7-fU3" secondAttribute="centerX" id="fWh-ra-DAq"/>
+                                                        <constraint firstItem="9kp-ti-5IA" firstAttribute="leading" secondItem="idZ-p7-fU3" secondAttribute="leading" constant="3" id="fZV-u0-xI0"/>
                                                         <constraint firstItem="zKr-GS-5IX" firstAttribute="top" secondItem="idZ-p7-fU3" secondAttribute="top" id="h7a-HC-PaW"/>
                                                         <constraint firstAttribute="bottom" secondItem="zKr-GS-5IX" secondAttribute="bottom" id="kw1-KB-Auo"/>
                                                         <constraint firstAttribute="trailing" secondItem="zKr-GS-5IX" secondAttribute="trailing" constant="3" id="lTg-a4-DcU"/>
+                                                        <constraint firstItem="9kp-ti-5IA" firstAttribute="top" secondItem="r7S-6g-zgS" secondAttribute="bottom" constant="5" id="ozE-TP-srz"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="subviews">
@@ -481,11 +488,10 @@
                                     <constraint firstAttribute="bottom" secondItem="39h-ch-jEA" secondAttribute="bottom" id="ZRI-HZ-4N8"/>
                                     <constraint firstAttribute="trailing" secondItem="39h-ch-jEA" secondAttribute="trailing" id="fjh-Jz-4FA"/>
                                     <constraint firstItem="39h-ch-jEA" firstAttribute="top" secondItem="D7W-v3-3eU" secondAttribute="top" id="rgf-8s-ebt"/>
-                                    <constraint firstAttribute="width" constant="315" id="xgu-03-NzS"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="40"/>
+                                        <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -549,13 +555,13 @@
                         <constraints>
                             <constraint firstItem="ugB-TA-fbf" firstAttribute="leading" secondItem="t4Q-v5-iJh" secondAttribute="leading" id="0ig-h8-Bjc"/>
                             <constraint firstItem="lGW-Oh-xkd" firstAttribute="trailing" secondItem="K8z-Rb-zD3" secondAttribute="trailing" constant="30" id="5c0-Vs-adH"/>
-                            <constraint firstItem="DSw-tf-s0E" firstAttribute="top" secondItem="D7W-v3-3eU" secondAttribute="bottom" constant="30" id="5du-V5-QoT"/>
-                            <constraint firstItem="D7W-v3-3eU" firstAttribute="leading" secondItem="lGW-Oh-xkd" secondAttribute="leading" constant="30" id="7sV-cE-6JO"/>
+                            <constraint firstItem="DSw-tf-s0E" firstAttribute="top" secondItem="D7W-v3-3eU" secondAttribute="bottom" constant="15" id="5du-V5-QoT"/>
+                            <constraint firstItem="D7W-v3-3eU" firstAttribute="leading" secondItem="lGW-Oh-xkd" secondAttribute="leading" constant="15" id="7sV-cE-6JO"/>
                             <constraint firstItem="lGW-Oh-xkd" firstAttribute="bottom" secondItem="DSw-tf-s0E" secondAttribute="bottom" id="8vK-T0-x2w"/>
                             <constraint firstItem="ugB-TA-fbf" firstAttribute="top" secondItem="t4Q-v5-iJh" secondAttribute="top" id="C9k-Gm-WRA"/>
                             <constraint firstAttribute="trailing" secondItem="ugB-TA-fbf" secondAttribute="trailing" id="Q2y-FT-s9d"/>
                             <constraint firstItem="DSw-tf-s0E" firstAttribute="leading" secondItem="lGW-Oh-xkd" secondAttribute="leading" id="QiF-h0-LWf"/>
-                            <constraint firstItem="lGW-Oh-xkd" firstAttribute="trailing" secondItem="D7W-v3-3eU" secondAttribute="trailing" constant="30" id="Xue-cd-hUm"/>
+                            <constraint firstItem="lGW-Oh-xkd" firstAttribute="trailing" secondItem="D7W-v3-3eU" secondAttribute="trailing" constant="15" id="Xue-cd-hUm"/>
                             <constraint firstItem="K8z-Rb-zD3" firstAttribute="leading" secondItem="lGW-Oh-xkd" secondAttribute="leading" constant="30" id="Zgn-qd-LGB"/>
                             <constraint firstAttribute="trailing" secondItem="DSw-tf-s0E" secondAttribute="trailing" id="daC-4J-ueH"/>
                             <constraint firstItem="K8z-Rb-zD3" firstAttribute="top" secondItem="t4Q-v5-iJh" secondAttribute="top" constant="30" id="fDr-m4-f70"/>
@@ -574,10 +580,10 @@
             </objects>
             <point key="canvasLocation" x="934" y="121"/>
         </scene>
-        <!--View Controller-->
+        <!--About-->
         <scene sceneID="oaR-UO-cev">
             <objects>
-                <viewController id="gQd-G9-iGw" sceneMemberID="viewController">
+                <viewController id="gQd-G9-iGw" customClass="About" customModule="Paguda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IlY-8X-2vG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -651,6 +657,31 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QlX-FG-kIK">
                                                     <rect key="frame" x="0.0" y="0.0" width="315" height="500.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paguda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2G-Nd-KHo">
+                                                            <rect key="frame" x="10" y="10" width="295" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="lDM-fZ-eTE"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="   " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9ap-rh-OvM">
+                                                            <rect key="frame" x="5" y="90" width="305" height="405.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="V2G-Nd-KHo" firstAttribute="leading" secondItem="QlX-FG-kIK" secondAttribute="leading" constant="10" id="3ej-iu-7rk"/>
+                                                        <constraint firstItem="V2G-Nd-KHo" firstAttribute="top" secondItem="QlX-FG-kIK" secondAttribute="top" constant="10" id="AF5-w1-GTB"/>
+                                                        <constraint firstItem="9ap-rh-OvM" firstAttribute="leading" secondItem="QlX-FG-kIK" secondAttribute="leading" constant="5" id="DRO-gS-X93"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9ap-rh-OvM" secondAttribute="trailing" constant="5" id="FTx-iB-M94"/>
+                                                        <constraint firstItem="9ap-rh-OvM" firstAttribute="top" secondItem="V2G-Nd-KHo" secondAttribute="bottom" constant="20" id="PuY-0u-GVE"/>
+                                                        <constraint firstAttribute="bottom" secondItem="9ap-rh-OvM" secondAttribute="bottom" constant="5" id="cZo-lx-yYU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="V2G-Nd-KHo" secondAttribute="trailing" constant="10" id="eiY-VZ-Mxj"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -692,6 +723,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="czM-it-TOc"/>
                     </view>
+                    <connections>
+                        <outlet property="textview" destination="9ap-rh-OvM" id="PBc-Ef-QPx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lx6-h7-z9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -709,7 +743,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0Hb-G2-4bh"/>
-        <segue reference="bJQ-5g-aDR"/>
-        <segue reference="w0K-Oy-cQt"/>
+        <segue reference="uY4-M4-dQf"/>
+        <segue reference="BjJ-8Z-PVh"/>
     </inferredMetricsTieBreakers>
 </document>
