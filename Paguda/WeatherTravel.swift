@@ -9,9 +9,11 @@
 import UIKit
 import Foundation
 import CoreLocation
+import MapKit
 
 class WeatherTravel: UIViewController
 {
+    @IBOutlet var mapView: MKMapView!
     
     @IBOutlet var textField: UITextField!
     

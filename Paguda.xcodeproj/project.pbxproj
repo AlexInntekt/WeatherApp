@@ -159,10 +159,10 @@
 			children = (
 				B2523B50203F38E700568576 /* AppDelegate.swift */,
 				B2523B52203F38E700568576 /* ViewController.swift */,
-				B242522A20A23EC600788CD6 /* AppMethods.swift */,
 				B242522420A23B7700788CD6 /* WeatherTravel.swift */,
-				B2523B54203F38E700568576 /* Main.storyboard */,
 				B27C184220A3A35200525A60 /* About.swift */,
+				B2523B54203F38E700568576 /* Main.storyboard */,
+				B242522A20A23EC600788CD6 /* AppMethods.swift */,
 				B2216F982042E997009792DA /* WeatherCell.swift */,
 				B2216F9C2042EC00009792DA /* Data */,
 				B2523B5A203F38E700568576 /* Assets.xcassets */,
