@@ -13,7 +13,6 @@
 		B2216F9E2042FEEA009792DA /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2216F9D2042FEEA009792DA /* GlobalData.swift */; };
 		B242522520A23B7700788CD6 /* WeatherTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242522420A23B7700788CD6 /* WeatherTravel.swift */; };
 		B242522720A23D5500788CD6 /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242522620A23D5500788CD6 /* UIButtonX.swift */; };
-		B242522B20A23EC600788CD6 /* AppMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242522A20A23EC600788CD6 /* AppMethods.swift */; };
 		B242522D20A246EB00788CD6 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B242522C20A246EB00788CD6 /* extension.swift */; };
 		B2523B51203F38E700568576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2523B50203F38E700568576 /* AppDelegate.swift */; };
 		B2523B53203F38E700568576 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2523B52203F38E700568576 /* ViewController.swift */; };
@@ -54,7 +53,6 @@
 		B2216F9D2042FEEA009792DA /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		B242522420A23B7700788CD6 /* WeatherTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTravel.swift; sourceTree = "<group>"; };
 		B242522620A23D5500788CD6 /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
-		B242522A20A23EC600788CD6 /* AppMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMethods.swift; sourceTree = "<group>"; };
 		B242522C20A246EB00788CD6 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		B2523B4D203F38E700568576 /* Paguda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paguda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2523B50203F38E700568576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				B242522420A23B7700788CD6 /* WeatherTravel.swift */,
 				B27C184220A3A35200525A60 /* About.swift */,
 				B2523B54203F38E700568576 /* Main.storyboard */,
-				B242522A20A23EC600788CD6 /* AppMethods.swift */,
 				B2216F982042E997009792DA /* WeatherCell.swift */,
 				B2216F9C2042EC00009792DA /* Data */,
 				B2523B5A203F38E700568576 /* Assets.xcassets */,
@@ -385,7 +382,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B242522520A23B7700788CD6 /* WeatherTravel.swift in Sources */,
-				B242522B20A23EC600788CD6 /* AppMethods.swift in Sources */,
 				B2523B53203F38E700568576 /* ViewController.swift in Sources */,
 				B242522720A23D5500788CD6 /* UIButtonX.swift in Sources */,
 				B25FC6872040813F006E4B4D /* CurrentWeather.swift in Sources */,

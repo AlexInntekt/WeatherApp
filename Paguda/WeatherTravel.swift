@@ -36,6 +36,14 @@ class WeatherTravel: UIViewController
     }
     
     
+    func getCoordinateFrom(address: String, completion: @escaping(_ coordinate: CLLocationCoordinate2D?, _ error: Error?) -> () )
+    {
+        CLGeocoder().geocodeAddressString(address) { placemarks, error in
+            completion(placemarks?.first?.location?.coordinate, error)
+        }
+    }
+    
+    
 
     override func viewDidLoad()
     {
@@ -50,12 +58,7 @@ class WeatherTravel: UIViewController
     }
 
  
-    func getCoordinateFrom(address: String, completion: @escaping(_ coordinate: CLLocationCoordinate2D?, _ error: Error?) -> () )
-    {
-        CLGeocoder().geocodeAddressString(address) { placemarks, error in
-            completion(placemarks?.first?.location?.coordinate, error)
-        }
-    }
+    
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

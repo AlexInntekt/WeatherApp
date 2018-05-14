@@ -32,8 +32,6 @@ func downloadDataForForecast(for specificURL: String,completed: @escaping Downlo
 {
     forecasts.removeAll()
     
-    var arrayWithForecast = [Forecast]()
-    
     //Download with Alamofire
     let currentURL = URL(string: specificURL)!
     
@@ -44,7 +42,7 @@ func downloadDataForForecast(for specificURL: String,completed: @escaping Downlo
             let result = response.result
             //print(response)
             
-            let numberOfDesiredObjects = 10
+          
             var index = 0
             
             
